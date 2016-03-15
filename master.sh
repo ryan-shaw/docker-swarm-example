@@ -8,6 +8,7 @@ docker-machine create \
     -d generic \
     --generic-ip-address $MACHINE \
     --swarm \
+    --swarm-master \
     --swarm-discovery="consul://$CONSUL:8500" \
     --engine-opt="cluster-store=consul://$CONSUL:8500" \
     --engine-opt="cluster-advertise=eth0:2376" \
